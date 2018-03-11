@@ -72,10 +72,10 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\saikr\.gradle\caches
 		ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:11:9-40
-activity#example.com.mydiary.HomeActivity
+activity#example.com.mydiary.view.HomeActivity
 ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:12:19-47
+		ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:12:19-52
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
