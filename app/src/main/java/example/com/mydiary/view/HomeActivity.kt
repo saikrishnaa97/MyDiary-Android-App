@@ -9,12 +9,13 @@ import android.view.MenuItem
 import android.widget.ImageButton
 import android.widget.Toast
 import example.com.mydiary.R
+import javax.inject.Inject
 
 class HomeActivity : AppCompatActivity(){
 
-    private var mToolbar : Toolbar?=null
-    private var mRecyclerView : RecyclerView ?= null
-    private var mAddButton : ImageButton ?= null
+    lateinit private var mToolbar : Toolbar
+    lateinit private var mRecyclerView : RecyclerView
+    lateinit private var mAddButton : ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

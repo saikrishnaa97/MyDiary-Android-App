@@ -4,13 +4,15 @@ ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.
 INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-21:12
 INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-21:12
 INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-21:12
+MERGED from [com.android.databinding:adapters:1.3.1] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\adapters-1.3.1.aar\a18aa8470eddfb31a8680411691c68e6\AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.databinding:library:1.3.1] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\library-1.3.1.aar\29d6bc2175d57f3b2f68152ba82ed158\AndroidManifest.xml:17:1-26:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\19583329ff27f5e445e59eeb2ccc788b\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\2455a0bcfb4745f919431cc840d36e68\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\3e827a477acee930630058df81cd971b\AndroidManifest.xml:17:1-28:12
 MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\rxandroid-1.2.1.aar\3ad48187c9adcac040f85973a7b62841\AndroidManifest.xml:15:1-21:12
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\acdf0a3e8a8bf970778aede3a1e8f9f0\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\673b88d70ce50c13a007135d213d0ae8\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\112ec3fc48b34c2c775c135a8dabb840\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\acdf0a3e8a8bf970778aede3a1e8f9f0\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\fd277f4a5d004ce49d61d7c820d9de43\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\b9d355119314928e3f8e157914af3492\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\5e931afbb9519539779c46e777588c7a\AndroidManifest.xml:17:1-31:12
@@ -42,12 +44,12 @@ MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\sa
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\2455a0bcfb4745f919431cc840d36e68\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\3e827a477acee930630058df81cd971b\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\3e827a477acee930630058df81cd971b\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\acdf0a3e8a8bf970778aede3a1e8f9f0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\acdf0a3e8a8bf970778aede3a1e8f9f0\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\673b88d70ce50c13a007135d213d0ae8\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\673b88d70ce50c13a007135d213d0ae8\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\112ec3fc48b34c2c775c135a8dabb840\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\112ec3fc48b34c2c775c135a8dabb840\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\acdf0a3e8a8bf970778aede3a1e8f9f0\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\acdf0a3e8a8bf970778aede3a1e8f9f0\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\fd277f4a5d004ce49d61d7c820d9de43\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\fd277f4a5d004ce49d61d7c820d9de43\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\b9d355119314928e3f8e157914af3492\AndroidManifest.xml:25:5-29:19
@@ -90,6 +92,10 @@ uses-sdk
 INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml
+MERGED from [com.android.databinding:adapters:1.3.1] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\adapters-1.3.1.aar\a18aa8470eddfb31a8680411691c68e6\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.databinding:adapters:1.3.1] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\adapters-1.3.1.aar\a18aa8470eddfb31a8680411691c68e6\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.databinding:library:1.3.1] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\library-1.3.1.aar\29d6bc2175d57f3b2f68152ba82ed158\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.databinding:library:1.3.1] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\library-1.3.1.aar\29d6bc2175d57f3b2f68152ba82ed158\AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\19583329ff27f5e445e59eeb2ccc788b\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\19583329ff27f5e445e59eeb2ccc788b\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\2455a0bcfb4745f919431cc840d36e68\AndroidManifest.xml:5:5-7:41
@@ -98,12 +104,12 @@ MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\saikr\.gradle\
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\3e827a477acee930630058df81cd971b\AndroidManifest.xml:20:5-44
 MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\rxandroid-1.2.1.aar\3ad48187c9adcac040f85973a7b62841\AndroidManifest.xml:19:5-43
 MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\rxandroid-1.2.1.aar\3ad48187c9adcac040f85973a7b62841\AndroidManifest.xml:19:5-43
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\acdf0a3e8a8bf970778aede3a1e8f9f0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\acdf0a3e8a8bf970778aede3a1e8f9f0\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\673b88d70ce50c13a007135d213d0ae8\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\673b88d70ce50c13a007135d213d0ae8\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\112ec3fc48b34c2c775c135a8dabb840\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\112ec3fc48b34c2c775c135a8dabb840\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\acdf0a3e8a8bf970778aede3a1e8f9f0\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\acdf0a3e8a8bf970778aede3a1e8f9f0\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\fd277f4a5d004ce49d61d7c820d9de43\AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\fd277f4a5d004ce49d61d7c820d9de43\AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\b9d355119314928e3f8e157914af3492\AndroidManifest.xml:21:5-23:58
@@ -132,12 +138,12 @@ meta-data#android.support.VERSION
 ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\19583329ff27f5e445e59eeb2ccc788b\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\3e827a477acee930630058df81cd971b\AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\3e827a477acee930630058df81cd971b\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\acdf0a3e8a8bf970778aede3a1e8f9f0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\acdf0a3e8a8bf970778aede3a1e8f9f0\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\673b88d70ce50c13a007135d213d0ae8\AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\673b88d70ce50c13a007135d213d0ae8\AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\112ec3fc48b34c2c775c135a8dabb840\AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\112ec3fc48b34c2c775c135a8dabb840\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\acdf0a3e8a8bf970778aede3a1e8f9f0\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\acdf0a3e8a8bf970778aede3a1e8f9f0\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\fd277f4a5d004ce49d61d7c820d9de43\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\fd277f4a5d004ce49d61d7c820d9de43\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\b9d355119314928e3f8e157914af3492\AndroidManifest.xml:26:9-28:38
