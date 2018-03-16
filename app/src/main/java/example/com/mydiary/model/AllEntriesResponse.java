@@ -6,7 +6,7 @@ import java.util.List;
 
 public class AllEntriesResponse {
     private GeneralResponse general;
-    private List<Entry> entryList;
+    private List<EntryDTO> entryList;
     private String emailId;
     private String name;
     private Date lastDate;
@@ -36,11 +36,11 @@ public class AllEntriesResponse {
         this.general = general;
     }
 
-    public List<Entry> getEntryList() {
+    public List<EntryDTO> getEntryList() {
         return entryList;
     }
 
-    public void setEntryList(List<Entry> entryList) {
+    public void setEntryList(List<EntryDTO> entryList) {
         this.entryList = entryList;
     }
 

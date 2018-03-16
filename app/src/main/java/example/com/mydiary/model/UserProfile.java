@@ -10,12 +10,9 @@ public class UserProfile {
     private String name;
     private Date dateOfBirth;
     private String emailId;
-    private Double mobileNumber;
-    private String userName;
-    private String password;
     private int notifyHrs;
     private int notifyMins;
-    private int consec_days;
+    private int consecDays;
     private Date lastEntry;
 
     @Override
@@ -25,12 +22,9 @@ public class UserProfile {
                 ", name='" + name + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
                 ", emailId='" + emailId + '\'' +
-                ", mobileNumber=" + mobileNumber +
-                ", userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
                 ", notifyHrs=" + notifyHrs +
                 ", notifyMins=" + notifyMins +
-                ", consec_days=" + consec_days +
+                ", consecDays=" + consecDays +
                 ", lastEntry=" + lastEntry +
                 '}';
     }
@@ -43,12 +37,12 @@ public class UserProfile {
         this.lastEntry = lastEntry;
     }
 
-    public int getConsec_days() {
-        return consec_days;
+    public int getConsecDays() {
+        return consecDays;
     }
 
-    public void setConsec_days(int consec_days) {
-        this.consec_days = consec_days;
+    public void setConsecDays(int consecDays) {
+        this.consecDays = consecDays;
     }
 
     public int getNotifyHrs() {
@@ -97,29 +91,5 @@ public class UserProfile {
 
     public void setEmailId(String emailId) {
         this.emailId = emailId;
-    }
-
-    public Double getMobileNumber() {
-        return mobileNumber;
-    }
-
-    public void setMobileNumber(Double mobileNumber) {
-        this.mobileNumber = mobileNumber;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 }
