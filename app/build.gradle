@@ -6,6 +6,8 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
+
+
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -20,6 +22,7 @@ android {
     dataBinding {
         enabled true
     }
+    kapt { generateStubs = true }
 
     buildTypes {
         release {
@@ -31,13 +34,16 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:26.1.0'
+
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.github.bumptech.glide:glide:3.7.0'
     implementation 'com.android.support:recyclerview-v7:26.1.0'
     implementation 'io.reactivex:rxandroid:1.2.1'
     implementation 'com.google.dagger:dagger:2.1'
+    implementation 'com.android.support:support-v4:26.0.0-beta1'
+    compileOnly 'org.glassfish:javax.annotation:10.0-b28'
     kapt 'com.google.dagger:dagger-compiler:2.0.2'
     kapt 'com.android.databinding:compiler:3.0.1'
     implementation 'org.greenrobot:eventbus:3.0.0'

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "580394317052",
+    "project_id": "sodium-sublime-134023"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580394317052:android:ff7df1daa9edd8d0",
+        "android_client_info": {
+          "package_name": "example.com.mydiary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "580394317052-5isvbi86a12bbf6qq89hiu8c85rgbjoo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "example.com.mydiary",
+            "certificate_hash": "1ee0bea114ae02089e491595bfa123f9ba319ea8"
+          }
+        },
+        {
+          "client_id": "580394317052-hgm1f3u10v7dnml77d11anhnkhvk1r50.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3CSw-03nczdBKibJYolX6IERi24mav7k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
