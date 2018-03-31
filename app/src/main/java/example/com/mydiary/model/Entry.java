@@ -10,7 +10,6 @@ public class Entry {
     private String title;
     private String message;
     private Date dateOfEntry;
-    private boolean markedForDelete;
 
     @Override
     public String toString() {
@@ -20,7 +19,6 @@ public class Entry {
                 ", title='" + title + '\'' +
                 ", message='" + message + '\'' +
                 ", dateOfEntry=" + dateOfEntry +
-                ", markedForDelete=" + markedForDelete +
                 '}';
     }
 
@@ -62,13 +60,5 @@ public class Entry {
 
     public void setDateOfEntry(Date dateOfEntry) {
         this.dateOfEntry = dateOfEntry;
-    }
-
-    public boolean isMarkedForDelete() {
-        return markedForDelete;
-    }
-
-    public void setMarkedForDelete(boolean markedForDelete) {
-        this.markedForDelete = markedForDelete;
     }
 }

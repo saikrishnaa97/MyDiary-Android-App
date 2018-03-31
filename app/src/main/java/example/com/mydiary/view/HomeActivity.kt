@@ -23,7 +23,7 @@ class HomeActivity : AppCompatActivity(){
     lateinit private var mAddButton : ImageButton
     lateinit private var binding : ActivityHomeBinding
     private var database = DBOps()
-
+    var homeExtra : Boolean ? = null
     lateinit @Inject
     var mRouter : Router
 
@@ -34,22 +34,33 @@ class HomeActivity : AppCompatActivity(){
         mToolbar = findViewById(R.id.home_toolbar)
         mToolbar?.title = ""
         setSupportActionBar(mToolbar)
-        mRecyclerView = findViewById(R.id.data_list_home)
+        mRecyclerView = this.findViewById(R.id.data_list_home)
         mAddButton = findViewById(R.id.add_entry)
+        try{
+            homeExtra = intent.getBooleanExtra(Constants.CHECK_PASSWORD_EXTRA,false)
+        }
+        catch (e : Exception){
+
+        }
         mAddButton?.setOnClickListener {
             Toast.makeText(this,"Add button clicked",Toast.LENGTH_SHORT).show()
         }
         database.openDB()
         try {
-            if (database.getHome().allentries.entryList.size > 0)
+            if (database.getHome().allentries.emailId != null && !homeExtra!!){
+                mRouter.routeTarget(Constants.CHECK_PASSWORD, this, null)
                 Toast.makeText(this, Constants.USER_FOUND, Toast.LENGTH_SHORT).show()
+            }
+            else if(homeExtra!!){
+
+            }
             else {
-                mRouter.routeTarget(Constants.REGISTER,this,Constants.LOGIN_REGISTER)
+                mRouter.routeTarget(Constants.LOGIN_REGISTER,this,null)
                 Toast.makeText(this, Constants.NO_USER_FOUND, Toast.LENGTH_SHORT).show()
             }
         }
         catch(e:Exception){
-            mRouter.routeTarget(Constants.REGISTER,this,Constants.LOGIN_REGISTER)
+            mRouter.routeTarget(Constants.LOGIN_REGISTER,this,null)
             Toast.makeText(this, Constants.NO_USER_FOUND, Toast.LENGTH_SHORT).show()
         }
     }
@@ -60,6 +71,9 @@ class HomeActivity : AppCompatActivity(){
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        if(item?.itemId == R.id.change_password){
+            mRouter?.routeTarget(Constants.CHANGE_PASSWORD,this,null)
+        }
         return super.onOptionsItemSelected(item)
     }
 

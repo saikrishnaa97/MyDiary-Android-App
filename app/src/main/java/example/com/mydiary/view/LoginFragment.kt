@@ -1,42 +1,38 @@
 package example.com.mydiary.view
 
 import android.content.Context
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
+import android.text.InputType
+import android.text.TextPaint
+import android.text.style.ClickableSpan
+import android.util.Patterns
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
+import android.view.inputmethod.InputMethodManager
+import android.widget.Button
 
 import example.com.mydiary.R
+import example.com.mydiary.database.DBOps
 import example.com.mydiary.databinding.FragmentLoginBinding
 import example.com.mydiary.utils.Constants
+import example.com.mydiary.utils.OnFragmentInteractionListener
 
-/**
- * A simple [Fragment] subclass.
- * Activities that contain this fragment must implement the
- * [LoginFragment.OnFragmentInteractionListener] interface
- * to handle interaction events.
- * Use the [LoginFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class LoginFragment : Fragment() {
 
-    // TODO: Rename and change types of parameters
-    private var mParam1: String? = null
-    private var mParam2: String? = null
+    private var mILoginRegisterActivityCommunicator: ILoginRegisterActivityCommunicator? = null
+    private var database = DBOps()
 
     private var mListener: OnFragmentInteractionListener? = null
-    lateinit private var binding : FragmentLoginBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        if (arguments != null) {
-            mParam1 = arguments.getString(ARG_PARAM1)
-            mParam2 = arguments.getString(ARG_PARAM2)
-        }
-    }
+    lateinit private var mFragmentLoginBinding : FragmentLoginBinding
+    private var btSubmit : Button ?= null
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -45,7 +41,16 @@ class LoginFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
-        binding = DataBindingUtil.bind(view)
+        mFragmentLoginBinding = DataBindingUtil.bind(view)
+        btSubmit = mFragmentLoginBinding?.btSubmit
+        btSubmit?.setOnClickListener {
+            if(mFragmentLoginBinding?.newPw1.text.toString().equals(mFragmentLoginBinding?.confirmPw.text.toString())) {
+                mILoginRegisterActivityCommunicator?.passwordChanged(database.changePassword(mFragmentLoginBinding?.oldPw.text.toString(), mFragmentLoginBinding?.newPw1.text.toString()))
+            }
+            else {
+                mILoginRegisterActivityCommunicator?.passwordsDonotMatch();
+            }
+        }
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -57,10 +62,10 @@ class LoginFragment : Fragment() {
 
     override fun onAttach(context: Context?) {
         super.onAttach(context)
-        if (context is OnFragmentInteractionListener) {
-            mListener = context
-        } else {
-            throw RuntimeException(context!!.toString() + " must implement OnFragmentInteractionListener")
+        try {
+            mILoginRegisterActivityCommunicator = context as ILoginRegisterActivityCommunicator
+        } catch (e: ClassCastException) {
+            throw ClassCastException(context.toString() + " must implement ILoginRegisterActivityCommunicator")
         }
     }
 

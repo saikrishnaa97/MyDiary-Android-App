@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/error_dialog_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_brand" />
+
+        <ImageView
+            android:id="@+id/error_icon"
+            android:layout_width="160dp"
+            android:layout_height="150dp"
+            android:layout_above="@+id/error_header"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="80dp"
+            app:srcCompat="@drawable/vector_internet_icon" />
+
+        <TextView
+            android:id="@+id/error_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="36dp"
+            android:text="@string/error_header_txt"
+            android:textColor="@color/color_4a4a4a"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/error_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/error_header"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textColor="@color/color_9b9b9b"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+        <FrameLayout
+            android:id="@+id/try_again_click"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/error_message"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/try_again_button_reload_border">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/try_again_arrow_image" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="@string/retry"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </FrameLayout>
+    </RelativeLayout>
+</layout>

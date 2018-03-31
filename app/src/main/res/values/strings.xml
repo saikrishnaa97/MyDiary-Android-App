@@ -3,4 +3,18 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_login_with_google">Login with Google</string>
+    <string name="text_or">or</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="login">Sign In</string>
+    <string name="text_forgot_password">Forgot password?</string>
+    <string name="text_email_warning">Enter a valid email address</string>
+    <string name="text_password_warning">Wrong/Empty password</string>
+    <string name="error_header_txt">Ooops!</string>
+    <string name="retry">Try Again</string>
+    <string name="user_created_success">Profile Created Successfully</string>
+    <string name="user_created_failure">There was a problem in creating the user profile</string>
+    <string name="pw_change_success">Password Changed Successfully</string>
+    <string name="pw_change_fail">Please Try Again. Password Could Not Be Changed.</string>
 </resources>
