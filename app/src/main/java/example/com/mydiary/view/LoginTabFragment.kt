@@ -39,6 +39,11 @@ class LoginTabFragment : Fragment() {
             LOGIN_FRAGMENT = 1
             TOTAL_NO_OF_FRAGMENTS_IN_VIEW_PAGER = 1
         }
+        else {
+            REGISTER_FRAGMENT = 1
+            LOGIN_FRAGMENT = 0
+            TOTAL_NO_OF_FRAGMENTS_IN_VIEW_PAGER = 1
+        }
         with(binding?.vpViewpager) {
             this?.adapter = MyAdapter(childFragmentManager, context)
             this?.setPageTransformer(true, ZoomOutPageTransformer())
