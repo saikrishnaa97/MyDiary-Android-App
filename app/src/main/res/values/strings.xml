@@ -10,11 +10,22 @@
     <string name="login">Sign In</string>
     <string name="text_forgot_password">Forgot password?</string>
     <string name="text_email_warning">Enter a valid email address</string>
-    <string name="text_password_warning">Wrong/Empty password</string>
+    <string name="text_password_warning">Passwords donot match</string>
+    <string name="wrong_password">Password Incorrect</string>
+    <string name="pw_invalid">Enter a valid password</string>
     <string name="error_header_txt">Ooops!</string>
     <string name="retry">Try Again</string>
     <string name="user_created_success">Profile Created Successfully</string>
     <string name="user_created_failure">There was a problem in creating the user profile</string>
     <string name="pw_change_success">Password Changed Successfully</string>
     <string name="pw_change_fail">Please Try Again. Password Could Not Be Changed.</string>
+    <string name="logout_confirmation">Are you sure you want to logout?</string>
+    <string name="logout">Logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="add_entry_success">Entry successfully Saved</string>
+    <string name="add_entry_failure">Could Not Save Entry</string>
+    <string name="delete_success">Deleted Successfully</string>
+    <string name="delete_fail">Could Not Delete The Entry</string>
+
 </resources>

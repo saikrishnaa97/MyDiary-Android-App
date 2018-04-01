@@ -24,7 +24,7 @@ class LoginTabFragment : Fragment() {
     companion object {
         private var LOGIN_FRAGMENT = 0
         private var REGISTER_FRAGMENT = 1
-        private var TOTAL_NO_OF_FRAGMENTS_IN_VIEW_PAGER = 2
+        private var TOTAL_NO_OF_FRAGMENTS_IN_VIEW_PAGER = 1
         private val loginFragmentInstance = LoginFragment()
         private val registerFragmentInstance = RegisterFragment()
     }
@@ -37,12 +37,10 @@ class LoginTabFragment : Fragment() {
         if(database.getHome().allentries.emailId == null){
             REGISTER_FRAGMENT = 0
             LOGIN_FRAGMENT = 1
-            TOTAL_NO_OF_FRAGMENTS_IN_VIEW_PAGER = 1
         }
         else {
             REGISTER_FRAGMENT = 1
             LOGIN_FRAGMENT = 0
-            TOTAL_NO_OF_FRAGMENTS_IN_VIEW_PAGER = 1
         }
         with(binding?.vpViewpager) {
             this?.adapter = MyAdapter(childFragmentManager, context)

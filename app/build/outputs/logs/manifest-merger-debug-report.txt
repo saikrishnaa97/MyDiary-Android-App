@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-31:12
-INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-31:12
-INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-31:12
-INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-31:12
+ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-33:12
 MERGED from [com.android.databinding:adapters:1.3.1] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\adapters-1.3.1.aar\ac2ee8d5c5786ea2a249471bfeaf122b\AndroidManifest.xml:17:1-26:12
 MERGED from [com.android.databinding:library:1.3.1] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\library-1.3.1.aar\53e613a502b275df3444b2fdd5fcc824\AndroidManifest.xml:17:1-26:12
 MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\firebase-core-11.0.4.aar\a8f4bf5864b4147175c6b072d8379fca\AndroidManifest.xml:2:1-6:12
@@ -11,6 +11,7 @@ MERGED from [com.android.support:design:26.1.0] C:\Users\saikr\.gradle\caches\tr
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\14a96ee32201b97313a7bc9f4073049f\AndroidManifest.xml:17:1-31:12
 MERGED from [com.jakewharton.timber:timber:4.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\timber-4.1.0.aar\ec37d3cd45592b18ced9a23669c39016\AndroidManifest.xml:2:1-10:12
 MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\rxandroid-1.2.1.aar\34b48f963abb7af7d7e0dd7f1e8a8679\AndroidManifest.xml:15:1-21:12
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\cardview-v7-25.3.1.aar\0ad143f237166b36fb6d200c27f7d0c9\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\6fb5fbb8b81b9fb19d782f1ee88313ce\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\e3ab10c1908c6c2f4e55c1e441072eee\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:transition:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\fb01e71b6008de187d29508a5ee1aa75\AndroidManifest.xml:17:1-28:12
@@ -32,20 +33,20 @@ MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\saikr\.gr
 MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\e46459a1f1c602dd8a4c92db233abd1e\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\f29ae8e3c5698748b47df794de9e8954\AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\29c4c8539bc3e8cfc10c76146ae04ac3\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-31:12
-INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-31:12
-INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-33:12
 	package
 		ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:3:5-34
 		INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-31:12
+		ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-33:12
 		INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-31:12
+		ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:1-33:12
 		INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:2:11-69
@@ -54,7 +55,7 @@ ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.
 	android:name
 		ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:5:22-78
 application
-ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:7:5-29:19
+ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:7:5-31:19
 MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\firebase-core-11.0.4.aar\a8f4bf5864b4147175c6b072d8379fca\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\firebase-core-11.0.4.aar\a8f4bf5864b4147175c6b072d8379fca\AndroidManifest.xml:5:5-20
 MERGED from [com.android.support:design:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\f514640c56d89630cb39e6b3fb68f72c\AndroidManifest.xml:25:5-29:19
@@ -63,6 +64,8 @@ MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\saikr\.gradle\cac
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\14a96ee32201b97313a7bc9f4073049f\AndroidManifest.xml:25:5-29:19
 MERGED from [com.jakewharton.timber:timber:4.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\timber-4.1.0.aar\ec37d3cd45592b18ced9a23669c39016\AndroidManifest.xml:8:5-20
 MERGED from [com.jakewharton.timber:timber:4.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\timber-4.1.0.aar\ec37d3cd45592b18ced9a23669c39016\AndroidManifest.xml:8:5-20
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\cardview-v7-25.3.1.aar\0ad143f237166b36fb6d200c27f7d0c9\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\cardview-v7-25.3.1.aar\0ad143f237166b36fb6d200c27f7d0c9\AndroidManifest.xml:26:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\6fb5fbb8b81b9fb19d782f1ee88313ce\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\6fb5fbb8b81b9fb19d782f1ee88313ce\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\e3ab10c1908c6c2f4e55c1e441072eee\AndroidManifest.xml:22:5-26:19
@@ -142,11 +145,15 @@ ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.
 	android:name
 		ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:26:19-62
 activity#example.com.mydiary.view.CheckPasswordActivity
-ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:27:9-28:67
+ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:27:9-29:58
 	android:windowSoftInputMode
-		ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:28:13-55
+		ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:29:13-55
 	android:name
-		ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:27:19-61
+		ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:28:13-55
+activity#example.com.mydiary.view.EntryActivity
+ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:30:9-65
+	android:name
+		ADDED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml:30:19-53
 uses-sdk
 INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\saikr\Desktop\mydiary\MyDiary3\app\src\main\AndroidManifest.xml
@@ -165,6 +172,8 @@ MERGED from [com.jakewharton.timber:timber:4.1.0] C:\Users\saikr\.gradle\caches\
 MERGED from [com.jakewharton.timber:timber:4.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\timber-4.1.0.aar\ec37d3cd45592b18ced9a23669c39016\AndroidManifest.xml:6:5-44
 MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\rxandroid-1.2.1.aar\34b48f963abb7af7d7e0dd7f1e8a8679\AndroidManifest.xml:19:5-43
 MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\rxandroid-1.2.1.aar\34b48f963abb7af7d7e0dd7f1e8a8679\AndroidManifest.xml:19:5-43
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\cardview-v7-25.3.1.aar\0ad143f237166b36fb6d200c27f7d0c9\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\cardview-v7-25.3.1.aar\0ad143f237166b36fb6d200c27f7d0c9\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\6fb5fbb8b81b9fb19d782f1ee88313ce\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\6fb5fbb8b81b9fb19d782f1ee88313ce\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\saikr\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\e3ab10c1908c6c2f4e55c1e441072eee\AndroidManifest.xml:20:5-44

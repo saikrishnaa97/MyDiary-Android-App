@@ -5,12 +5,21 @@ import java.util.Date;
 import java.util.List;
 
 public class AllEntriesResponse {
+    private String profileID;
     private GeneralResponse general;
     private List<EntryDTO> entryList;
     private String emailId;
     private String name;
     private Date lastDate;
     private int consecDays;
+
+    public String getProfileID() {
+        return profileID;
+    }
+
+    public void setProfileID(String profileID) {
+        this.profileID = profileID;
+    }
 
     public int getConsecDays() {
         return consecDays;

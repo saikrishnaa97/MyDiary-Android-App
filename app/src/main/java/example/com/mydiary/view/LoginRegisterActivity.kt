@@ -106,12 +106,13 @@ class LoginRegisterActivity : AppCompatActivity(), OnFragmentInteractionListener
     override fun createUserProfile(isCreatedSuccessfully: Boolean) {
         if(isCreatedSuccessfully){
             Toast.makeText(this,getString(R.string.user_created_success),Toast.LENGTH_SHORT).show()
-            mRouter.routeTarget(Constants.HOME,this,true)
+            finish()
         }
         else {
             Toast.makeText(this,getString(R.string.user_created_failure),Toast.LENGTH_SHORT).show()
         }
     }
+
     override fun passwordsDonotMatch() {
         Toast.makeText(this,getString(R.string.text_password_warning),Toast.LENGTH_SHORT).show()
     }

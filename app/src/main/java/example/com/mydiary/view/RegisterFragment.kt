@@ -39,7 +39,8 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         binding = DataBindingUtil.bind(view)
         button = binding?.btSubmit
-        button?.setOnClickListener{
+        button?.setOnClickListener {
+            if (binding?.etConfirmPassword.text.toString().equals(binding?.etPassword.text.toString())) {
                 var newUserRequest = NewUserRequest()
                 newUserRequest?.name = binding?.etName?.text.toString()
                 newUserRequest?.emailId = binding?.etEmail?.text.toString()
@@ -50,6 +51,10 @@ class RegisterFragment : Fragment() {
                 newUserRequest?.password = binding?.etPassword?.text.toString()
                 mILoginRegisterActivityCommunicator?.createUserProfile(database.registerUser(newUserRequest))
             }
+            else {
+                mILoginRegisterActivityCommunicator?.passwordsDonotMatch()
+            }
+        }
         }
 
     override fun onAttach(context: Context?) {

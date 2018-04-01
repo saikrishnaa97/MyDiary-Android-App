@@ -24,8 +24,10 @@
             android:name=".view.LoginRegisterActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".view.ForgotPasswordActivity" />
-        <activity android:name=".view.CheckPasswordActivity"
-            android:windowSoftInputMode="stateVisible"></activity>
+        <activity
+            android:name=".view.CheckPasswordActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity android:name=".view.EntryActivity"></activity>
     </application>
 
 </manifest>

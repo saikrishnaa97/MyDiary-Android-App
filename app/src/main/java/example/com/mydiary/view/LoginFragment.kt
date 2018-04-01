@@ -48,7 +48,7 @@ class LoginFragment : Fragment() {
                 mILoginRegisterActivityCommunicator?.passwordChanged(database.changePassword(mFragmentLoginBinding?.oldPw.text.toString(), mFragmentLoginBinding?.newPw1.text.toString()))
             }
             else {
-                mILoginRegisterActivityCommunicator?.passwordsDonotMatch();
+                mILoginRegisterActivityCommunicator?.passwordsDonotMatch()
             }
         }
     }

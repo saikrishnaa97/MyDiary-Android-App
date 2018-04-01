@@ -22,6 +22,10 @@ class Constants {
         val HOME = "Home Page"
         val CHECK_PASSWORD_EXTRA = "check_password_extra"
         val CHANGE_PASSWORD = "change_password"
+        val ADD_ENTRY = "Add Entry"
+        val TYPE_HEADER = 0
+        val TYPE_ITEM = 1
+        val TYPE_FOOTER = 2
     }
 
 

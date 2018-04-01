@@ -19,7 +19,7 @@ class DBOps {
 
     fun openDB(): Boolean {
         try {
-            sqliteDB.execSQL("create table if not exists Entry (id VARCAHR(20) not null, profile_id VARCHAR(20) not null, title VARCHAR(20), message TEXT not null, date_of_entry DATE);")
+            sqliteDB.execSQL("create table if not exists Entry (id VARCAHR(20) not null, profile_id VARCHAR(20) not null, title VARCHAR(20), message VARCHAR(255) not null, date_of_entry DATE);")
             sqliteDB.execSQL("create table if not exists UserProfile (id VARCHAR(20) not null , name VARCHAR(30), date_of_birth DATE, email_id VARCHAR(20),password VARCHAR(30), notify_hrs TINYINT(2), notify_mins TINYINT(2), consec_days SMALLINT(3), last_entry DATE);")
             return true
         } catch (e: SQLException) {
@@ -61,19 +61,19 @@ class DBOps {
                     user.consecDays = mCursor!!.getInt(mCursor!!.getColumnIndex("consec_days"))
                     user.lastEntry = Date(mCursor!!.getLong(mCursor!!.getColumnIndex("last_entry")))
 
-
-                    val entryList = "select * from Entry Where profile_id = '" + user!!.id + "' ORDER BY date_of_entry DESC LIMIT 10;"
+                    val entryList = "select * from Entry ORDER BY date_of_entry DESC LIMIT 10;"
                     mCursor = sqliteDB.rawQuery(entryList, null)
                     if (mCursor !== null && mCursor!!.count > 0) {
                         mCursor!!.moveToFirst()
                         val resultEntryList = ArrayList<EntryDTO>()
-                        while (mCursor!!.isAfterLast) {
+                        while (!mCursor!!.isLast) {
                             val resultEntry = EntryDTO()
                             resultEntry.setId(mCursor!!.getString(mCursor!!.getColumnIndex("id")))
                             resultEntry.setDoe(Date(mCursor!!.getString(mCursor!!.getColumnIndex("date_of_entry"))))
                             resultEntry.setMessage(mCursor!!.getString(mCursor!!.getColumnIndex("message")))
                             resultEntry.setTitle(mCursor!!.getString(mCursor!!.getColumnIndex("title")))
                             resultEntryList.add(resultEntry)
+                            mCursor!!.moveToNext()
                         }
                         allEntriesResponse.entryList = resultEntryList
                         response.notifyHrs = user!!.getNotifyHrs()
@@ -88,6 +88,7 @@ class DBOps {
                 }
                 allEntriesResponse.general = general
                 allEntriesResponse.emailId = emailId
+                allEntriesResponse.profileID = user.id
                 response.allentries = allEntriesResponse
                 return response
             } else {
@@ -126,4 +127,44 @@ class DBOps {
             return false
         }
     }
+
+    fun logout() : Boolean {
+        try {
+            sqliteDB.execSQL("TRUNCATE TABLE Entry;")
+            sqliteDB.execSQL("TRUNCATE TABLE UserProfile;")
+            return true
+        }
+        catch (e : Exception){
+            Timber.e(e.message.toString())
+            return false
+        }
+    }
+
+    fun addEntry(entryDTO: EntryDTO) : Boolean{
+        try{
+            mCursor = sqliteDB.rawQuery("select id from UserProfile;",null)
+            if(mCursor != null && mCursor!!.count > 0) {
+                mCursor?.moveToFirst()
+                var profileId = mCursor?.getString(mCursor?.getColumnIndex("id")!!)
+                sqliteDB.execSQL("INSERT INTO Entry values('" + UUID.randomUUID().toString() + "','" + profileId + "','" + entryDTO.getTitle() + "','" + entryDTO.getMessage() + "','" + entryDTO.getDoe() + "');")
+            }
+            return true
+        }
+        catch (e : Exception){
+            Timber.e(e.message)
+            return false
+        }
+    }
+
+    fun deleteEntry(entryId: String) : Boolean {
+        try{
+            sqliteDB.execSQL("DELETE FROM Entry Where id = '"+entryId+"';")
+            return true
+        }
+        catch (e:Exception){
+            Timber.e(e.message)
+            return false
+        }
+    }
+
 }

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import javax.inject.Inject;
 
 import example.com.mydiary.view.CheckPasswordActivity;
+import example.com.mydiary.view.EntryActivity;
 import example.com.mydiary.view.HomeActivity;
 import example.com.mydiary.view.LoginRegisterActivity;
 
@@ -33,6 +34,7 @@ public class Router {
             }
             else if(urlString.equals(Constants.Companion.getCHECK_PASSWORD())){
                 Intent intent = new Intent(context, CheckPasswordActivity.class);
+                intent.putExtra(Constants.Companion.getCHECK_PASSWORD_EXTRA(),Boolean.valueOf(objects[0].toString()));
                 context.startActivity(intent);
             }
             else if(urlString.equals(Constants.Companion.getHOME())){
@@ -42,6 +44,9 @@ public class Router {
             }
             else if(urlString.equals(Constants.Companion.getCHANGE_PASSWORD())){
                 context.startActivity(new Intent(context,LoginRegisterActivity.class));
+            }
+            else if(urlString.equals(Constants.Companion.getADD_ENTRY())){
+                context.startActivity(new Intent(context, EntryActivity.class));
             }
         }
         return true;
