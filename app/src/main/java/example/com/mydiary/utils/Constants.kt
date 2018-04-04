@@ -30,6 +30,12 @@ class Constants {
         val FULL_ENTRY_EXTRA = "Full Entry Extra"
         val ALL_ENTRY = "All Entry"
         val ALL_ENTRY_EXTRA = "All Entry Extra"
+        val CHANGE_TIME = "Change Time"
+        val TIME_REQ_CODE = 1
+        val TIME_RESULT = "time result"
+        val NOTIFY_HRS = "hrs"
+        val NOTIFY_MINS = "mins"
+        val NOTIFICATION_SERVICE = "Notification Service"
     }
 
 

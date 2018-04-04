@@ -87,7 +87,6 @@ class LoginRegisterActivity : AppCompatActivity(), OnFragmentInteractionListener
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        getMenuInflater().inflate(R.menu.home_menu, menu)
         return true
     }
 

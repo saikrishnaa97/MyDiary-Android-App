@@ -1,6 +1,11 @@
 package example.com.mydiary.view
 
+import android.app.Activity
+import android.app.PendingIntent
+import android.app.TimePickerDialog
+import android.content.Context
 import android.content.DialogInterface
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -15,11 +20,14 @@ import android.widget.ImageButton
 import android.widget.Toast
 import example.com.mydiary.R
 import example.com.mydiary.adapter.HomeAdapter
+import example.com.mydiary.background.NotificationService
 import example.com.mydiary.database.DBOps
 import example.com.mydiary.databinding.ActivityHomeBinding
 import example.com.mydiary.model.HomeResponse
 import example.com.mydiary.utils.Constants
 import example.com.mydiary.utils.Router
+import java.util.*
+
 
 class HomeActivity : AppCompatActivity(),IHomeActivityCommunicator{
 
@@ -28,7 +36,6 @@ class HomeActivity : AppCompatActivity(),IHomeActivityCommunicator{
     lateinit private var binding : ActivityHomeBinding
     lateinit private var mToolbar : Toolbar
     private var response : HomeResponse ? = null
-
     var homeExtra : Boolean ? = null
     lateinit var mRouter : Router
     private var database = DBOps()
@@ -102,8 +109,17 @@ class HomeActivity : AppCompatActivity(),IHomeActivityCommunicator{
             dialog.show()
 
         }
+        else if(item?.itemId == R.id.change_time){
+            TimePickerDialog(this,TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
+                if (database?.updateTime(hourOfDay, minute)) {
+                    Toast.makeText(this, R.string.time_updated_success, Toast.LENGTH_SHORT).show()
+                    updateUI()
+                }
+            },response?.notifyHrs!!,response?.notifyMins!!,true).show()
+        }
         return super.onOptionsItemSelected(item)
     }
+
 
     override fun openFullEntry(id: String?) {
         mRouter.routeTarget(Constants.FULL_ENTRY,this,id)
@@ -120,6 +136,7 @@ class HomeActivity : AppCompatActivity(),IHomeActivityCommunicator{
     }
     private fun updateUI(){
         response = database.getHome()
+        mRouter.routeTarget(Constants.NOTIFICATION_SERVICE,this,response?.notifyHrs,response?.notifyMins)
         if(response?.allentries?.entryList != null && response?.allentries?.entryList?.size!! > 0) {
             mRecyclerView.layoutManager = LinearLayoutManager(this)
             mRecyclerView.adapter = HomeAdapter(this, response?.allentries?.entryList!!)

@@ -30,7 +30,7 @@ class DBOps {
     fun registerUser(newUserRequest: NewUserRequest): Boolean {
         try {
             var id = UUID.randomUUID().toString()
-            var query = "insert into UserProfile(id,name,date_of_birth,email_id,password,notify_hrs,notify_mins,consec_days) values ('" + id + "','" + newUserRequest.name + "','" + newUserRequest.dob + "',' " + newUserRequest.emailId + "','" + newUserRequest.password + "'," + newUserRequest.notifyHrs + "," + newUserRequest.notifyMins + ",0)";
+            var query = "insert into UserProfile(id,name,date_of_birth,email_id,password,notify_hrs,notify_mins,consec_days,last_entry) values ('" + id + "','" + newUserRequest.name + "','" + newUserRequest.dob + "',' " + newUserRequest.emailId + "','" + newUserRequest.password + "'," + newUserRequest.notifyHrs + "," + newUserRequest.notifyMins + ",0,'"+Date()+"')";
             sqliteDB.execSQL(query)
             return true
         } catch (e: SQLException) {
@@ -76,8 +76,10 @@ class DBOps {
                         } while (mCursor!!.moveToNext())
                         val count = "select count(id) as count from Entry;"
                         mCursor = sqliteDB.rawQuery(count, null)
-                        mCursor?.moveToFirst()
-                        allEntriesResponse.numOfEntries = mCursor?.getInt(mCursor?.getColumnIndex("count")!!)!!
+                        if(mCursor != null && mCursor?.count!! > 0) {
+                            mCursor?.moveToFirst()
+                            allEntriesResponse.numOfEntries = mCursor?.getInt(mCursor?.getColumnIndex("count")!!)!!
+                        }
                         allEntriesResponse.entryList = resultEntryList
                         response.notifyHrs = user!!.getNotifyHrs()
                         response.notifyMins = user!!.getNotifyMins()
@@ -92,6 +94,8 @@ class DBOps {
                 allEntriesResponse.general = general
                 allEntriesResponse.emailId = emailId
                 allEntriesResponse.profileID = user.id
+                response.notifyMins = user.notifyMins
+                response.notifyHrs = user.notifyHrs
                 response.allentries = allEntriesResponse
                 return response
             } else {
@@ -210,5 +214,17 @@ class DBOps {
             allEntriesResponse.name = mCursor?.getString(mCursor?.getColumnIndex("name")!!)
         }
         return allEntriesResponse
+    }
+
+    fun updateTime(hrs: Int, mins: Int)  : Boolean{
+        var query = "UPDATE UserProfile SET notify_hrs = "+hrs+",notify_mins = "+mins+";"
+        try{
+            sqliteDB.execSQL(query)
+            return true
+        }
+        catch (e:Exception){
+            Timber.e(e.message)
+            return false
+        }
     }
 }

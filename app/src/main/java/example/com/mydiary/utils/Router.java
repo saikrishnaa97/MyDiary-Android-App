@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import javax.inject.Inject;
 
+import example.com.mydiary.background.NotificationService;
 import example.com.mydiary.view.AllEntriesActivity;
 import example.com.mydiary.view.CheckPasswordActivity;
 import example.com.mydiary.view.EntryActivity;
@@ -58,6 +59,12 @@ public class Router {
             else if(urlString.equals(Constants.Companion.getALL_ENTRY())){
                 Intent intent = new Intent(context, AllEntriesActivity.class);
                 context.startActivity(intent);
+            }
+            else if(urlString.equals(Constants.Companion.getNOTIFICATION_SERVICE())){
+                Intent intent = new Intent(context, NotificationService.class);
+                intent.putExtra(Constants.Companion.getNOTIFY_HRS(),Integer.parseInt(objects[0].toString()));
+                intent.putExtra(Constants.Companion.getNOTIFY_MINS(),Integer.parseInt(objects[1].toString()));
+                context.startService(intent);
             }
         }
         return true;

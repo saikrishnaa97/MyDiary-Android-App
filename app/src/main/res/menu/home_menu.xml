@@ -8,6 +8,12 @@
         android:icon="@android:drawable/ic_menu_view"/>
 
     <item
+        android:id="@+id/change_time"
+        android:orderInCategory="100"
+        android:title="Change Time"
+        android:icon="@android:drawable/ic_menu_view"/>
+
+    <item
         android:id="@+id/logout"
         android:orderInCategory="300"
         android:title="Logout"

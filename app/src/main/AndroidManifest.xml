@@ -3,6 +3,7 @@
     package="example.com.mydiary">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:allowBackup="true"
@@ -11,13 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".view.HomeActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".view.LoginRegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible"/>
+
+        <activity android:name=".view.ForgotPasswordActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".view.ForgotPasswordActivity" />
+
         <activity
             android:name=".view.CheckPasswordActivity"
             android:screenOrientation="portrait"
@@ -28,14 +35,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".view.EntryActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateVisible" />
+
         <activity
             android:name=".view.FullEntryActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".view.AllEntriesActivity"></activity>
+
+        <activity android:name=".view.AllEntriesActivity"
+            android:screenOrientation="portrait"/>
+
+        <receiver android:name=".background.BootReceiver" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".background.NotificationService"/>
     </application>
 
 </manifest>

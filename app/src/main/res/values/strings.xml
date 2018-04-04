@@ -28,4 +28,7 @@
     <string name="delete_success">Deleted Successfully</string>
     <string name="delete_fail">Could Not Delete The Entry</string>
     <string name="no_entry">You have not started writing anything. Get Started.</string>
+    <string name="time_updated_success">Time Updated Successfully</string>
+    <string name="notification_title">My Diary</string>
+    <string name="notification_message">Its time for you to write in your diary</string>
 </resources>
