@@ -1,6 +1,5 @@
 package example.com.mydiary.view
 
-import android.app.Dialog
 import android.content.DialogInterface
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
@@ -11,6 +10,7 @@ import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.ImageButton
 import android.widget.Toast
 import example.com.mydiary.R
@@ -20,14 +20,13 @@ import example.com.mydiary.databinding.ActivityHomeBinding
 import example.com.mydiary.model.HomeResponse
 import example.com.mydiary.utils.Constants
 import example.com.mydiary.utils.Router
-import javax.inject.Inject
 
 class HomeActivity : AppCompatActivity(),IHomeActivityCommunicator{
 
-    lateinit private var mToolbar : Toolbar
     lateinit private var mRecyclerView : RecyclerView
     lateinit private var mAddButton : ImageButton
     lateinit private var binding : ActivityHomeBinding
+    lateinit private var mToolbar : Toolbar
     private var response : HomeResponse ? = null
 
     var homeExtra : Boolean ? = null
@@ -51,6 +50,10 @@ class HomeActivity : AppCompatActivity(),IHomeActivityCommunicator{
         }
         mAddButton?.setOnClickListener {
             mRouter.routeTarget(Constants.ADD_ENTRY,this,null)
+            finish()
+        }
+        binding?.allEntries?.setOnClickListener{
+            mRouter.routeTarget(Constants.ALL_ENTRY,this,null)
         }
         database.openDB()
         try {
@@ -58,13 +61,8 @@ class HomeActivity : AppCompatActivity(),IHomeActivityCommunicator{
             if (response?.allentries?.emailId != null && !homeExtra!!){
                 mRouter.routeTarget(Constants.CHECK_PASSWORD, this, false)
             }
-            else if(homeExtra!!){
-                mRecyclerView.layoutManager = LinearLayoutManager(this)
-                mRecyclerView.adapter = HomeAdapter(this,response?.allentries?.entryList!!)
-            }
-            else {
-                mRouter.routeTarget(Constants.LOGIN_REGISTER,this,null)
-                finish()
+            else if(homeExtra!! && response?.allentries?.entryList != null){
+                updateUI()
             }
         }
         catch(e:Exception){
@@ -74,10 +72,7 @@ class HomeActivity : AppCompatActivity(),IHomeActivityCommunicator{
     }
 
     override fun onResume() {
-        mRecyclerView.layoutManager = LinearLayoutManager(this)
-        response = database.getHome()
-        mRecyclerView.adapter = HomeAdapter(this,response?.allentries?.entryList!!)
-        mRecyclerView?.adapter.notifyDataSetChanged()
+        updateUI()
         super.onResume()
     }
 
@@ -110,15 +105,32 @@ class HomeActivity : AppCompatActivity(),IHomeActivityCommunicator{
         return super.onOptionsItemSelected(item)
     }
 
+    override fun openFullEntry(id: String?) {
+        mRouter.routeTarget(Constants.FULL_ENTRY,this,id)
+    }
+
     override fun delete(entryId: String) {
         if(database.deleteEntry(entryId)){
             Toast.makeText(this,getString(R.string.delete_success),Toast.LENGTH_SHORT).show()
-            response = database.getHome()
-            mRecyclerView.adapter = HomeAdapter(this,response?.allentries?.entryList!!)
-            mRecyclerView.adapter.notifyDataSetChanged()
+            updateUI()
         }
         else {
             Toast.makeText(this,getString(R.string.delete_fail),Toast.LENGTH_SHORT).show()
+        }
+    }
+    private fun updateUI(){
+        response = database.getHome()
+        if(response?.allentries?.entryList != null && response?.allentries?.entryList?.size!! > 0) {
+            mRecyclerView.layoutManager = LinearLayoutManager(this)
+            mRecyclerView.adapter = HomeAdapter(this, response?.allentries?.entryList!!)
+            mRecyclerView?.adapter.notifyDataSetChanged()
+            if(response?.allentries?.numOfEntries!! > 10){
+                binding?.allEntries.visibility = View.VISIBLE
+            }
+        }
+        else {
+            binding?.clNoEntries.visibility = View.VISIBLE
+            binding?.dataListHome.visibility = View.GONE
         }
     }
 

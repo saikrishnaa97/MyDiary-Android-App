@@ -26,6 +26,10 @@ class Constants {
         val TYPE_HEADER = 0
         val TYPE_ITEM = 1
         val TYPE_FOOTER = 2
+        val FULL_ENTRY = "Full Entry"
+        val FULL_ENTRY_EXTRA = "Full Entry Extra"
+        val ALL_ENTRY = "All Entry"
+        val ALL_ENTRY_EXTRA = "All Entry Extra"
     }
 
 

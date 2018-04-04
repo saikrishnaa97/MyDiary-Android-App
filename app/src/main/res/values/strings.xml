@@ -27,5 +27,5 @@
     <string name="add_entry_failure">Could Not Save Entry</string>
     <string name="delete_success">Deleted Successfully</string>
     <string name="delete_fail">Could Not Delete The Entry</string>
-
+    <string name="no_entry">You have not started writing anything. Get Started.</string>
 </resources>

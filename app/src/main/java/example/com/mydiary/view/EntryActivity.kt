@@ -59,6 +59,7 @@ class EntryActivity : AppCompatActivity() {
     private fun addEntrySuccessful(isEntered : Boolean) {
         if(isEntered) {
             Toast.makeText(this, R.string.add_entry_success,Toast.LENGTH_SHORT).show()
+            mRouter.routeTarget(Constants.HOME,this,true)
             finish()
         }
         else {

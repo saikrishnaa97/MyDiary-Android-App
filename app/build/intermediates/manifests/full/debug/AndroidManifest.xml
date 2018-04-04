@@ -35,7 +35,15 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="example.com.mydiary.view.HomeActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="example.com.mydiary.view.LoginRegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="example.com.mydiary.view.ForgotPasswordActivity" />
+        <activity
+            android:name="example.com.mydiary.view.CheckPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,13 +51,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="example.com.mydiary.view.LoginRegisterActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name="example.com.mydiary.view.ForgotPasswordActivity" />
-        <activity
-            android:name="example.com.mydiary.view.CheckPasswordActivity"
+            android:name="example.com.mydiary.view.EntryActivity"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateVisible" />
-        <activity android:name="example.com.mydiary.view.EntryActivity" />
+        <activity
+            android:name="example.com.mydiary.view.FullEntryActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="example.com.mydiary.view.AllEntriesActivity" />
 
         <meta-data
             android:name="android.support.VERSION"

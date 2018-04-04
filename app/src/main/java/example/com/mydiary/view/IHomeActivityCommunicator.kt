@@ -6,5 +6,6 @@ package example.com.mydiary.view
 interface IHomeActivityCommunicator {
 
     fun delete(entryId : String)
+    fun openFullEntry(id: String?)
 
 }

@@ -6,8 +6,10 @@ import android.os.Bundle;
 
 import javax.inject.Inject;
 
+import example.com.mydiary.view.AllEntriesActivity;
 import example.com.mydiary.view.CheckPasswordActivity;
 import example.com.mydiary.view.EntryActivity;
+import example.com.mydiary.view.FullEntryActivity;
 import example.com.mydiary.view.HomeActivity;
 import example.com.mydiary.view.LoginRegisterActivity;
 
@@ -47,6 +49,15 @@ public class Router {
             }
             else if(urlString.equals(Constants.Companion.getADD_ENTRY())){
                 context.startActivity(new Intent(context, EntryActivity.class));
+            }
+            else if(urlString.equals(Constants.Companion.getFULL_ENTRY())){
+                Intent intent = new Intent(context, FullEntryActivity.class);
+                intent.putExtra(Constants.Companion.getFULL_ENTRY_EXTRA(),objects[0].toString());
+                context.startActivity(intent);
+            }
+            else if(urlString.equals(Constants.Companion.getALL_ENTRY())){
+                Intent intent = new Intent(context, AllEntriesActivity.class);
+                context.startActivity(intent);
             }
         }
         return true;

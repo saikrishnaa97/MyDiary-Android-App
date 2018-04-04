@@ -604,6 +604,10 @@
         "source": "C:\\Users\\saikr\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\14a96ee32201b97313a7bc9f4073049f\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
+        "merged": "C:\\Users\\saikr\\Desktop\\mydiary\\MyDiary3\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_all_entries.xml.flat",
+        "source": "C:\\Users\\saikr\\Desktop\\mydiary\\MyDiary3\\app\\src\\main\\res\\layout\\activity_all_entries.xml"
+    },
+    {
         "merged": "C:\\Users\\saikr\\Desktop\\mydiary\\MyDiary3\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
         "source": "C:\\Users\\saikr\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\14a96ee32201b97313a7bc9f4073049f\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
@@ -814,6 +818,10 @@
     {
         "merged": "C:\\Users\\saikr\\Desktop\\mydiary\\MyDiary3\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\saikr\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\14a96ee32201b97313a7bc9f4073049f\\res\\drawable-xhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\saikr\\Desktop\\mydiary\\MyDiary3\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_full_entry.xml.flat",
+        "source": "C:\\Users\\saikr\\Desktop\\mydiary\\MyDiary3\\app\\src\\main\\res\\layout\\activity_full_entry.xml"
     },
     {
         "merged": "C:\\Users\\saikr\\Desktop\\mydiary\\MyDiary3\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",

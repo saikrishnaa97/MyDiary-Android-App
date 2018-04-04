@@ -8,6 +8,7 @@ public class AllEntriesResponse {
     private String profileID;
     private GeneralResponse general;
     private List<EntryDTO> entryList;
+    private int numOfEntries;
     private String emailId;
     private String name;
     private Date lastDate;
@@ -67,5 +68,13 @@ public class AllEntriesResponse {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getNumOfEntries() {
+        return numOfEntries;
+    }
+
+    public void setNumOfEntries(int numOfEntries) {
+        this.numOfEntries = numOfEntries;
     }
 }
