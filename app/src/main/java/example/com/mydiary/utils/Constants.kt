@@ -36,6 +36,7 @@ class Constants {
         val NOTIFY_HRS = "hrs"
         val NOTIFY_MINS = "mins"
         val NOTIFICATION_SERVICE = "Notification Service"
+        val HOME_CLOSE = "Home Close"
     }
 
 

@@ -26,6 +26,7 @@ import example.com.mydiary.databinding.ActivityHomeBinding
 import example.com.mydiary.model.HomeResponse
 import example.com.mydiary.utils.Constants
 import example.com.mydiary.utils.Router
+import timber.log.Timber
 import java.util.*
 
 
@@ -54,6 +55,14 @@ class HomeActivity : AppCompatActivity(),IHomeActivityCommunicator{
         }
         catch (e : Exception){
 
+        }
+        try{
+            if(intent.getIntExtra(Constants.ADD_BUTTON_CLICKED,1) == 0){
+                finish()
+            }
+        }
+        catch (e:Exception){
+            Timber.e(e.message)
         }
         mAddButton?.setOnClickListener {
             mRouter.routeTarget(Constants.ADD_ENTRY,this,null)

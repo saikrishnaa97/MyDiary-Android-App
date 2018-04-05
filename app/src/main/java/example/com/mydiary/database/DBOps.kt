@@ -6,6 +6,8 @@ import android.database.sqlite.SQLiteDatabase
 import example.com.mydiary.model.*
 import example.com.mydiary.utils.Router
 import timber.log.Timber
+import java.sql.Timestamp
+import java.text.SimpleDateFormat
 import java.util.*
 
 /**
@@ -15,7 +17,6 @@ class DBOps {
 
     private var sqliteDB: SQLiteDatabase = SQLiteDatabase.openOrCreateDatabase("/data/data/example.com.mydiary/databases/mydiary.db", null)
     private var mCursor: Cursor? = null
-
 
     fun openDB(): Boolean {
         try {
@@ -149,8 +150,19 @@ class DBOps {
             if (mCursor != null && mCursor!!.count > 0) {
                 mCursor?.moveToFirst()
                 var profileId = mCursor?.getString(mCursor?.getColumnIndex("id")!!)
+                entryDTO?.setMessage(entryDTO?.getMessage()?.replace("'","''",false)!!)
+                entryDTO?.setTitle(entryDTO?.getTitle()?.replace("'","''",false)!!)
                 sqliteDB.execSQL("INSERT INTO Entry values('" + UUID.randomUUID().toString() + "','" + profileId + "','" + entryDTO.getTitle() + "','" + entryDTO.getMessage() + "','" + entryDTO.getDoe() + "');")
                 sqliteDB.execSQL("UPDATE UserProfile SET last_entry = '"+entryDTO.getDoe().toString()+"';")
+                var query = "SELECT * FROM Entry ORDER BY date_of_entry DESC LIMIT 1;"
+                mCursor = sqliteDB.rawQuery(query,null)
+                if(mCursor != null && mCursor?.count!! > 0) {
+                    mCursor?.moveToFirst()
+                    var dbDate = Date(mCursor!!.getString(mCursor!!.getColumnIndex("date_of_entry")))
+                    if(dbDate.compareTo(Date()) == -1){
+                             sqliteDB.execSQL("UPDATE UserProfile SET consec_days = (select consec_days FROM UserProfile) + 1;")
+                            }
+                }
             }
             return true
         } catch (e: Exception) {
@@ -227,4 +239,35 @@ class DBOps {
             return false
         }
     }
+    fun checkToday() : Boolean{
+        var formatter = SimpleDateFormat("dd/MMM/yyyy")
+        var date = formatter.format(Date())
+        var query = "SELECT * FROM Entry ORDER BY date_of_entry DESC LIMIT 1;"
+        mCursor = sqliteDB.rawQuery(query,null)
+        if(mCursor != null && mCursor?.count!! > 0){
+            mCursor?.moveToFirst()
+            var dbDate = Date(mCursor!!.getString(mCursor!!.getColumnIndex("date_of_entry")))
+            var databaseDate = formatter.format(dbDate)
+            if(date.equals(databaseDate)){
+                return true
+            }
+            else {
+                return false
+            }
+        }
+        else {
+            return false
+        }
+    }
+
+    fun getNotifyTime() : IntArray {
+        var resultTime : IntArray? = null
+        mCursor = sqliteDB.rawQuery("select notify_hrs,notify_mins from UserProfile;",null)
+        if(mCursor!= null && mCursor?.count!! > 0){
+            mCursor?.moveToFirst()
+            resultTime = intArrayOf(mCursor?.getInt(0)!!,mCursor?.getInt(1)!!)
+        }
+        return resultTime!!
+    }
+
 }

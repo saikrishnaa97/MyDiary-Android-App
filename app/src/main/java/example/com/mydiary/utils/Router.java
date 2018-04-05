@@ -1,6 +1,7 @@
 package example.com.mydiary.utils;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -30,7 +31,7 @@ public class Router {
         // No Implementation required
     }
 
-    public boolean routeTarget(String urlString, Activity context, Object... objects) {
+    public boolean routeTarget(String urlString, Context context, Object... objects) {
         if(urlString != null){
             if(urlString.equals(Constants.Companion.getLOGIN_REGISTER())) {
                 context.startActivity(new Intent(context, LoginRegisterActivity.class));
