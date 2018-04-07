@@ -24,7 +24,7 @@ import android.text.Editable
 class EntryActivity : AppCompatActivity() {
 
     lateinit var mRouter : Router
-    private var database = DBOps()
+    private var database = DBOps(this)
     private var binding : ActivityEntryBinding ? = null
     private var btSubmit : Button ? = null
     override fun onCreate(savedInstanceState: Bundle?) {

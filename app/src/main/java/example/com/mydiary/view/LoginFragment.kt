@@ -1,35 +1,23 @@
 package example.com.mydiary.view
 
 import android.content.Context
-import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v4.content.ContextCompat
-import android.text.InputType
-import android.text.TextPaint
-import android.text.style.ClickableSpan
-import android.util.Patterns
-import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
-import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 
 import example.com.mydiary.R
 import example.com.mydiary.database.DBOps
 import example.com.mydiary.databinding.FragmentLoginBinding
-import example.com.mydiary.utils.Constants
-import example.com.mydiary.utils.OnFragmentInteractionListener
 
 class LoginFragment : Fragment() {
 
-    private var mILoginRegisterActivityCommunicator: ILoginRegisterActivityCommunicator? = null
-    private var database = DBOps()
-
+    private lateinit var mILoginRegisterActivityCommunicator: ILoginRegisterActivityCommunicator
+    private lateinit var database: DBOps
     private var mListener: OnFragmentInteractionListener? = null
     lateinit private var mFragmentLoginBinding : FragmentLoginBinding
     private var btSubmit : Button ?= null
@@ -37,6 +25,7 @@ class LoginFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
+        database = mILoginRegisterActivityCommunicator?.getDB()
         return inflater!!.inflate(R.layout.fragment_login, container, false)
     }
 
@@ -45,7 +34,7 @@ class LoginFragment : Fragment() {
         btSubmit = mFragmentLoginBinding?.btSubmit
         btSubmit?.setOnClickListener {
             if(mFragmentLoginBinding?.newPw1.text.toString().equals(mFragmentLoginBinding?.confirmPw.text.toString())) {
-                mILoginRegisterActivityCommunicator?.passwordChanged(database.changePassword(mFragmentLoginBinding?.oldPw.text.toString(), mFragmentLoginBinding?.newPw1.text.toString()))
+                mILoginRegisterActivityCommunicator?.passwordChanged(database?.changePassword(mFragmentLoginBinding?.oldPw.text.toString(), mFragmentLoginBinding?.newPw1.text.toString())!!)
             }
             else {
                 mILoginRegisterActivityCommunicator?.passwordsDonotMatch()

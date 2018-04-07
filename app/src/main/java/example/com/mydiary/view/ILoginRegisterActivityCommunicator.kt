@@ -1,6 +1,8 @@
 package example.com.mydiary.view
 
+import android.database.sqlite.SQLiteDatabase
 import android.support.v4.app.Fragment
+import example.com.mydiary.database.DBOps
 import example.com.mydiary.model.NewUserRequest
 import org.jetbrains.annotations.NotNull
 
@@ -19,4 +21,5 @@ interface ILoginRegisterActivityCommunicator {
     fun createUserProfile(isCreatedSuccessfully : Boolean)
     fun passwordChanged(isChanged : Boolean)
     fun passwordsDonotMatch()
+    fun getDB(): DBOps
 }

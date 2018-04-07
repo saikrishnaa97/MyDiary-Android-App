@@ -19,7 +19,7 @@ import java.text.SimpleDateFormat
 
 class FullEntryActivity : AppCompatActivity() {
     lateinit private var mToolbar : Toolbar
-    private var database = DBOps()
+    private var database = DBOps(this)
     private var binding : ActivityFullEntryBinding ? = null
     private var fullExtra : String ? = null
     private var data : EntryDetails ? = null
