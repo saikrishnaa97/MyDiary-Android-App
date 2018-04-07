@@ -4,17 +4,7 @@
             "outputFile": "C:\\Users\\saikr\\Desktop\\mydiary\\MyDiary3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\saikr\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\f29ae8e3c5698748b47df794de9e8954\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\saikr\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\14a96ee32201b97313a7bc9f4073049f\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\saikr\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\afd2d0e899906eda82764011e7511aaa\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\saikr\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\7ac707da123f69711bc6e943f3359562\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

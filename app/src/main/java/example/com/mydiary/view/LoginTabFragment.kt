@@ -33,7 +33,7 @@ class LoginTabFragment : Fragment() {
          inflater?.inflate(R.layout.login_register_tab_layout,container,false)
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
-        binding = DataBindingUtil.bind(view)
+        binding = DataBindingUtil.bind(view!!)
         if(database.getHome().allentries.emailId == null){
             REGISTER_FRAGMENT = 0
             LOGIN_FRAGMENT = 1

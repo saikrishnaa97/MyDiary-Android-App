@@ -41,7 +41,7 @@ class LoginFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
-        mFragmentLoginBinding = DataBindingUtil.bind(view)
+        mFragmentLoginBinding = DataBindingUtil.bind(view!!)!!
         btSubmit = mFragmentLoginBinding?.btSubmit
         btSubmit?.setOnClickListener {
             if(mFragmentLoginBinding?.newPw1.text.toString().equals(mFragmentLoginBinding?.confirmPw.text.toString())) {

@@ -55,7 +55,7 @@ class HomeAdapter(val mIHomeActivityCommunicator: IHomeActivityCommunicator, val
         var binding : LayoutEntryItemBinding ?= null
         var btDelete : Button ?= null
         init {
-            binding = DataBindingUtil.bind(view)
+            binding = DataBindingUtil.bind(view!!)
         }
     }
 }

@@ -54,7 +54,7 @@ class AllEntriesAdapter(var mIAllEntryActivityCommunicator: IAllEntryActivityCom
         var binding : LayoutEntryItemBinding?= null
         var btDelete : Button ?= null
         init {
-            binding = DataBindingUtil.bind(view)
+            binding = DataBindingUtil.bind(view!!)
         }
     }
 

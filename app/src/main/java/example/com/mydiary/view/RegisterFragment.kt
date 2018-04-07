@@ -37,7 +37,7 @@ class RegisterFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
-        binding = DataBindingUtil.bind(view)
+        binding = DataBindingUtil.bind(view!!)!!
         button = binding?.btSubmit
         button?.setOnClickListener {
             if (binding?.etConfirmPassword.text.toString().equals(binding?.etPassword.text.toString())) {

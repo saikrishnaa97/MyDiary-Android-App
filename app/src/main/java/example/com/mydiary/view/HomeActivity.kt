@@ -143,6 +143,7 @@ class HomeActivity : AppCompatActivity(),IHomeActivityCommunicator{
             Toast.makeText(this,getString(R.string.delete_fail),Toast.LENGTH_SHORT).show()
         }
     }
+
     private fun updateUI(){
         response = database.getHome()
         mRouter.routeTarget(Constants.NOTIFICATION_SERVICE,this,response?.notifyHrs,response?.notifyMins)
