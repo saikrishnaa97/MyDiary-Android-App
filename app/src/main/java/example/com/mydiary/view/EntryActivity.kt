@@ -18,13 +18,14 @@ import example.com.mydiary.utils.Constants
 import example.com.mydiary.utils.Router
 import java.util.*
 import android.text.Editable
-
+import android.view.KeyEvent
+import android.view.View
 
 
 class EntryActivity : AppCompatActivity() {
 
     lateinit var mRouter : Router
-    private var database = DBOps()
+    private var database = DBOps(this)
     private var binding : ActivityEntryBinding ? = null
     private var btSubmit : Button ? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,13 +44,24 @@ class EntryActivity : AppCompatActivity() {
             }
         })
         btSubmit?.setOnClickListener {
-            var entryDTO = EntryDTO()
-            entryDTO.setDoe(Date())
-            entryDTO.setId(UUID.randomUUID().toString())
-            entryDTO.setMessage(binding?.etMessage?.text.toString())
-            entryDTO.setTitle(binding?.etTitle?.text.toString())
-            addEntrySuccessful(database.addEntry(entryDTO))
+            textSubmit()
         }
+        binding?.etMessage?.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+            if (keyCode == KeyEvent.KEYCODE_ENTER) {
+                //Perform Code
+                textSubmit()
+                return@OnKeyListener true
+            }
+            false
+        })
+    }
+    fun textSubmit(){
+        var entryDTO = EntryDTO()
+        entryDTO.setDoe(Date())
+        entryDTO.setId(UUID.randomUUID().toString())
+        entryDTO.setMessage(binding?.etMessage?.text.toString())
+        entryDTO.setTitle(binding?.etTitle?.text.toString())
+        addEntrySuccessful(database.addEntry(entryDTO))
     }
 
     private fun charLimitReached(){

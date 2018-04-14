@@ -13,14 +13,13 @@ import example.com.mydiary.R
 import example.com.mydiary.database.DBOps
 import example.com.mydiary.databinding.LoginRegisterTabLayoutBinding
 import example.com.mydiary.utils.Constants
-import example.com.mydiary.utils.Router
 import example.com.mydiary.utils.ZoomOutPageTransformer
 
 class LoginTabFragment : Fragment() {
 
     private var binding : LoginRegisterTabLayoutBinding? = null
-    private var database = DBOps()
-
+    private lateinit var mILoginRegisterActivityCommunicator : ILoginRegisterActivityCommunicator
+    private lateinit  var database : DBOps
     companion object {
         private var LOGIN_FRAGMENT = 0
         private var REGISTER_FRAGMENT = 1
@@ -29,12 +28,19 @@ class LoginTabFragment : Fragment() {
         private val registerFragmentInstance = RegisterFragment()
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? =
-         inflater?.inflate(R.layout.login_register_tab_layout,container,false)
+    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        database =mILoginRegisterActivityCommunicator?.getDB()
+        return inflater?.inflate(R.layout.login_register_tab_layout, container, false)
+    }
+
+    override fun onAttach(context: Context?) {
+        mILoginRegisterActivityCommunicator = context as ILoginRegisterActivityCommunicator
+        super.onAttach(context)
+    }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         binding = DataBindingUtil.bind(view!!)
-        if(database.getHome().allentries.emailId == null){
+        if(database?.getHome()?.allentries?.emailId == null){
             REGISTER_FRAGMENT = 0
             LOGIN_FRAGMENT = 1
         }

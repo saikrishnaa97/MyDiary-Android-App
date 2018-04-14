@@ -10,22 +10,19 @@ import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.ImageButton
 import android.widget.Toast
 import example.com.mydiary.R
 import example.com.mydiary.adapter.AllEntriesAdapter
-import example.com.mydiary.adapter.HomeAdapter
 import example.com.mydiary.database.DBOps
 import example.com.mydiary.databinding.ActivityAllEntriesBinding
 import example.com.mydiary.model.AllEntriesResponse
-import example.com.mydiary.model.HomeResponse
 import example.com.mydiary.utils.Constants
 import example.com.mydiary.utils.Router
 
 class AllEntriesActivity : AppCompatActivity() , IAllEntryActivityCommunicator{
     var mRouter : Router = Router()
-    private var database = DBOps()
+    private var database = DBOps(this)
     lateinit private var mRecyclerView : RecyclerView
     lateinit private var mToolbar : Toolbar
     private var binding : ActivityAllEntriesBinding ? = null

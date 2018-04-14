@@ -1,11 +1,7 @@
 package example.com.mydiary.view
 
-import android.app.Activity
-import android.app.PendingIntent
 import android.app.TimePickerDialog
-import android.content.Context
 import android.content.DialogInterface
-import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -20,14 +16,12 @@ import android.widget.ImageButton
 import android.widget.Toast
 import example.com.mydiary.R
 import example.com.mydiary.adapter.HomeAdapter
-import example.com.mydiary.background.NotificationService
 import example.com.mydiary.database.DBOps
 import example.com.mydiary.databinding.ActivityHomeBinding
 import example.com.mydiary.model.HomeResponse
 import example.com.mydiary.utils.Constants
 import example.com.mydiary.utils.Router
 import timber.log.Timber
-import java.util.*
 
 
 class HomeActivity : AppCompatActivity(),IHomeActivityCommunicator{
@@ -39,7 +33,7 @@ class HomeActivity : AppCompatActivity(),IHomeActivityCommunicator{
     private var response : HomeResponse ? = null
     var homeExtra : Boolean ? = null
     lateinit var mRouter : Router
-    private var database = DBOps()
+    private var database = DBOps(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -71,7 +65,6 @@ class HomeActivity : AppCompatActivity(),IHomeActivityCommunicator{
         binding?.allEntries?.setOnClickListener{
             mRouter.routeTarget(Constants.ALL_ENTRY,this,null)
         }
-        database.openDB()
         try {
             response = database.getHome()
             if (response?.allentries?.emailId != null && !homeExtra!!){

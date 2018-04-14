@@ -37,6 +37,8 @@ class Constants {
         val NOTIFY_MINS = "mins"
         val NOTIFICATION_SERVICE = "Notification Service"
         val HOME_CLOSE = "Home Close"
+        val DB_PATH = "/data/data/example.com.mydiary/databases/mydiary.db"
+        val DB_NAME = "mydiary.db"
     }
 
 
