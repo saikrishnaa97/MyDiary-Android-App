@@ -225,7 +225,7 @@ public class DBOps extends SQLiteOpenHelper {
     }
 
     public AllEntriesResponse getAllEntries()  {
-        String queryEntry = "select * from Entry;";
+        String queryEntry = "select * from Entry ORDER BY date_of_entry DESC;";
         String queryProfile = "select * from UserProfile;";
         AllEntriesResponse allEntriesResponse = new AllEntriesResponse();
         EntryDTO entryDetails;

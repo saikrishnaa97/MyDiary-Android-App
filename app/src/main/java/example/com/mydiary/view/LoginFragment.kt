@@ -5,14 +5,21 @@ import android.databinding.DataBindingUtil
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
 import android.widget.Button
+import android.widget.TextView
 
 import example.com.mydiary.R
 import example.com.mydiary.database.DBOps
 import example.com.mydiary.databinding.FragmentLoginBinding
+import android.widget.Toast
+import android.view.KeyEvent.KEYCODE_ENTER
+
+
 
 class LoginFragment : Fragment() {
 
@@ -33,12 +40,24 @@ class LoginFragment : Fragment() {
         mFragmentLoginBinding = DataBindingUtil.bind(view!!)!!
         btSubmit = mFragmentLoginBinding?.btSubmit
         btSubmit?.setOnClickListener {
-            if(mFragmentLoginBinding?.newPw1.text.toString().equals(mFragmentLoginBinding?.confirmPw.text.toString())) {
-                mILoginRegisterActivityCommunicator?.passwordChanged(database?.changePassword(mFragmentLoginBinding?.oldPw.text.toString(), mFragmentLoginBinding?.newPw1.text.toString())!!)
+            textSubmit()
+        }
+        mFragmentLoginBinding?.confirmPw.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+            if (keyCode == KeyEvent.KEYCODE_ENTER) {
+                //Perform Code
+                textSubmit()
+                return@OnKeyListener true
             }
-            else {
-                mILoginRegisterActivityCommunicator?.passwordsDonotMatch()
-            }
+            false
+        })
+    }
+
+    fun textSubmit() {
+        if(mFragmentLoginBinding?.newPw1.text.toString().equals(mFragmentLoginBinding?.confirmPw.text.toString())) {
+            mILoginRegisterActivityCommunicator?.passwordChanged(database?.changePassword(mFragmentLoginBinding?.oldPw.text.toString(), mFragmentLoginBinding?.newPw1.text.toString())!!)
+        }
+        else {
+            mILoginRegisterActivityCommunicator?.passwordsDonotMatch()
         }
     }
 
