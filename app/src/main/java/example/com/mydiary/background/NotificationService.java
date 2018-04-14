@@ -85,6 +85,7 @@ public class NotificationService extends Service {
                                             .setContentText(getText(R.string.notification_message))
                                             .setSmallIcon(R.drawable.ic_launcher_background)
                                             .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
+                                            .setAutoCancel(true)
                                             .setContentIntent(pendingIntent);
                             NotificationManagerCompat notificationManager = NotificationManagerCompat.from(getApplicationContext());
                             notificationManager.notify(1, notification.build());
